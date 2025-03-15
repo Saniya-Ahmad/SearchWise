@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "SearchWise",
-  description: "An open source search engine built with Next.js and Tailwind Css.",
+  description: "An open source search engine clone built with Next.js and Tailwind Css.",
 };
 
 export default function RootLayout({ children }) {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+       <Footer />
       </body>
     </html>
   );
