@@ -10,7 +10,8 @@ export default function HomeSearch() {
 const[input,setInput]= useState('');
 // console.log(input);
 const router = useRouter();
-//omitted the random search loading part on clicking feeling lucky
+
+const [randomSearchLoading, setRandomSearchLoading] = useState(false);
 
 const handleSubmit =(e) => {
   e.preventDefault();
@@ -20,13 +21,13 @@ const handleSubmit =(e) => {
 
 //feeling lucky ke liye
 const randomSearch=async(e)=>{
-  
-  const response=  await fetch('https://random-word-api.herokuapp.com/word')
+  setRandomSearchLoading(true);
+  const response=  await fetch('https://random-word-api.vercel.app/')
   .then((res)=> res.json())
   .then((data) =>data[0]);
   if(!response) return;
   router.push(`/search/web?searchTerm=${response}`);
- 
+  setRandomSearchLoading(false);
 }
   return (
     <>
@@ -53,11 +54,12 @@ const randomSearch=async(e)=>{
         hover:shadow-md w-36 h-10'>Explore More</button>
     
     <button 
+     disabled={randomSearchLoading}
     onClick={randomSearch}
     className='bg-gray-100 rounded-md
         text-sm text text-gray-800 hover:ring-gray-200
         focus:outline-none active:ring-gray-300
-        hover:shadow-md w-36 h-10'>Feeling lucky..</button>    
+        hover:shadow-md w-36 h-10'>{randomSearchLoading ? 'Loading...' : 'Feeling lucky'}</button>    
     </div>
       
     </>
