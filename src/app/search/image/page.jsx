@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ImageSearcgPage() {
+export default function ImageSearchPage() {
   return (
     <div>
       ImageSearchPage
