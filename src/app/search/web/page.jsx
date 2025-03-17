@@ -7,7 +7,7 @@ export default async function WebSearchPage({ searchParams }) {
   if (!response.ok) throw new Error('Something went wrong');  
   const data = await response.json();
     const results = data.items;
-    console.log(data)
+    //console.log(data)
 
     if (!results) {
       return (
