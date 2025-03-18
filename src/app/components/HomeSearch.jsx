@@ -22,7 +22,7 @@ const handleSubmit =(e) => {
 //feeling lucky ke liye
 const randomSearch=async(e)=>{
   setRandomSearchLoading(true);
-  const response=  await fetch('https://random-word-api.vercel.app/')
+  const response=  await fetch('https://random-word-api.vercel.app/api')
   .then((res)=> res.json())
   .then((data) =>data[0]);
   if(!response) return;
