@@ -1,5 +1,5 @@
 import ImageSearchResults from '@/app/components/ImageSearchResults';
-import { useSearchParams } from 'next/navigation';
+
 import Link from 'next/link';
 
 export default async function ImageSearchPage({ searchParams }) {
