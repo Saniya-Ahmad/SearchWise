@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Parser from 'html-react-parser'
+import PaginationButtons from './PaginationButtons'
 export default function WebSearchResults({results}) {
   return (
     <div className='w-full mx-auto px-3 pb-24 sm:pl-[4%] md:pl-[14%] lg:pl-52'>
