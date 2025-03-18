@@ -29,7 +29,9 @@ export default function ImageSearchResults({results}) {
                
                ))}
         </div>
-      
+        <div className='ml-16'>
+        <PaginationButtons />
+      </div>
     </div>
   )
 }
