@@ -1,5 +1,5 @@
 import CountryLookup from "./CountryLookup";
-
+import { FaCopyright } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="absolute bottom-0 text-sm
@@ -22,6 +22,9 @@ export default function Footer() {
             <li className="hover:underline cursor-pointer">Settings</li>
            
             </ul>
+        </div>
+        <div className=" flex flex-row justify-center">
+        <FaCopyright  className="mt-1 ml-4 mr-2"/> Copyright 2025, Saniya 
         </div>
 
     </footer>
